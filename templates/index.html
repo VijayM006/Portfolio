@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Name's Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="shortcut icon" href="{{url_for('static',filename='images/favicon.png')}}" type="image/x-icon">
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Vijay M</h1>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <div class="content about">
+      <img src="static/images/Vijay pass.jpg" alt="My Photo">
+      <div>
+        <h2>About Me</h2>
+        <p>
+          Hi, I'm <strong>Vijay M</strong>, a web development enthusiast with a knack for creating sleek, dynamic applications. My experience spans across web, game, and AR development, with expertise in Python, Flask, and JavaScript.
+        </p>
+        <p>
+          I'm currently seeking opportunities as a Web Developer, Python Developer, or Software Engineer. I’m passionate about crafting efficient solutions and eager to tackle new challenges in the tech world.
+        </p>
+        <a href="#contact" class="btn">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" style="background: #282828;">
+    <div class="content">
+      <h2>Projects</h2>
+      <section id="projects" style="background: #282828;">
+        <div class="content">
+          <h2>Projects</h2>
+          <div class="projects">
+            <!-- Project 1 -->
+            <div class="project-card">
+              <img src="static/images/Netflix.gif" alt="Netflix Clone">
+              <h3>Netflix Clone</h3>
+              <p>
+                Developed a Netflix clone using Python, Flask, HTML, CSS, REST API, MySQL, and JavaScript. The project replicates Netflix’s user interface and functionality, including user authentication, media browsing, and streaming.
+              </p>
+              <a href="https://github.com/VijayM006/Netflix_clone" class="btn">View Project</a>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+              <img src="static/images/mutual.jpg" alt="Mutual Fund Web Application">
+              <h3>Mutual Fund Web Application</h3>
+              <p>
+                Created a comprehensive Mutual Fund web application using Python Flask for backend processing, HTML and CSS for the frontend, and MySQL for database integration.
+              </p>
+              <a href="https://github.com/VijayM006/mutual-fund" class="btn">View Project</a>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card">
+              <img src="static/images/Eemployees.jpg" alt="Employee Details Management System">
+              <h3>Employee Details Management System</h3>
+              <p>
+                Developed an Employee Details Management System using Python Flask, MongoDB, and PyMongo. The system efficiently manages employee data with a user-friendly interface.
+              </p>
+              <a href="https://github.com/VijayM006/Emp-details-Mysql" class="btn">View Project</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-content">
+      <div class="skill-item">
+        <h3>Programming Languages</h3>
+        <p>Python, JavaScript, HTML, CSS</p>
+      </div>
+      <div class="skill-item">
+        <h3>Frameworks & Libraries</h3>
+        <p>Flask, REST API, MongoDB</p>
+      </div>
+      <div class="skill-item">
+        <h3>Database Management</h3>
+        <p>MySQL, MongoDB</p>
+      </div>
+      <div class="skill-item">
+        <h3>Tools & Technologies</h3>
+        <p>Git, GitHub, VS Code, Postman</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="content experience">
+      <div>
+        <h2>Experience</h2>
+        <ul>
+          <li><strong>Backend Developer Trainee at Febevvy Software Service Pvt Ltd</strong> (Year)
+            <p>
+              Completed a trainee program focusing on backend development. Gained hands-on experience with technologies like Python, MySQL, and REST APIs, contributing to various projects.
+            </p>
+          </li>
+          <!-- Add more experiences as needed -->
+        </ul>
+      </div>
+      <img src="static/images/VijayM.jpg" alt="Experience Image">
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="content">
+      <h2>Contact Me</h2>
+      <form id="contact-form" action="{{ url_for('send') }}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="contact" style="background: #001f3f;">
+    <div class="content contact">
+      <div>
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:vijaymurugankkl@gmail.com">vijaymurugankkl@gmail.com</a></p>
+        <p>Phone: <a href="tel:8870587288">8870587288</a></p>
+        <div class="social-media">
+          <a href="https://www.linkedin.com/in/vijaym006" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/VijayM006" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>        
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2024 Vijay. All rights reserved.
+  </footer>
+
+</body>
+</html>
